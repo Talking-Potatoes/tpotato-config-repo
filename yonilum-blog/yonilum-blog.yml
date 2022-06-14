@@ -1,7 +1,3 @@
-spring:
-  application:
-    name: yonilum-blog
-
 logging:
   config: classpath:logback-spring.xml
   level:
@@ -23,6 +19,8 @@ server:
 
 
 spring:
+  application:
+    name: yonilum-blog
   config:
     use-legacy-processing: true
   profiles:
