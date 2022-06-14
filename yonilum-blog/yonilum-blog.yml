@@ -17,7 +17,6 @@ server:
   tomcat:
     basedir: /home/ec2-user/blog/
 
-
 spring:
   application:
     name: yonilum-blog
@@ -27,7 +26,7 @@ spring:
     include: console-logging
   servlet:
     multipart:
-      max-request-size: 5MB #nginx 설정과 통일하자.
+      max-request-size: 5MB
       max-file-size: 5MB
   freemarker:
     cache: true
@@ -84,11 +83,10 @@ spring:
             user-name-attribute: id
 
 
-# JWT 관련
 app-security:
   auth:
-    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC #JWT Token 을 Hash 할 때 사용하는 Secret Key
-    tokenExpirationMsec: 864000000 # JWT Token의 유효기간
+    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenExpirationMsec: 864000000
   oauth2:
     authorizedRedirectUris:
       - http://localhost:8080/oauth2/redirect
